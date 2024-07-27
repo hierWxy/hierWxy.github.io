@@ -1,6 +1,6 @@
 @font-face {
     font-family:'arzhu';
-    src:url('D:\迅雷云盘\11\otf\ChillCalligraphyChunQiu_ChenFeng.otf'); /* 修改成你的字体 */
+    src:url('/css/ChillCalligraphyChunQiu_ChenFeng.otf'); /* 修改成你的字体 */
     font-display:swap
 }
 h1#site-title {
