@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>JavaWeb | 木叶村</title><meta name="author" content="草木流年"><meta name="copyright" content="草木流年"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第三章、JavaScript1、JS简介Javascript，提供了数拆验证的基本功能。ECMA-262 是正式的Javascript 标准。这个标准基于Javascript (Netscape) 和JScript (Microsof)。ECMA-262 的开发始于1996年，在 1997年7月，ECMA会员大会采纳了它的首个版本。这个标准由ECMA组织发展和维护。JavaScript 的正式名称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaWeb">
+<meta property="og:url" content="http://hierwxy.github.io/2024/10/20/JavaWeb/index.html">
+<meta property="og:site_name" content="木叶村">
+<meta property="og:description" content="第三章、JavaScript1、JS简介Javascript，提供了数拆验证的基本功能。ECMA-262 是正式的Javascript 标准。这个标准基于Javascript (Netscape) 和JScript (Microsof)。ECMA-262 的开发始于1996年，在 1997年7月，ECMA会员大会采纳了它的首个版本。这个标准由ECMA组织发展和维护。JavaScript 的正式名称">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://hierwxy.github.io/img/head.jpg">
+<meta property="article:published_time" content="2024-10-20T07:20:14.000Z">
+<meta property="article:modified_time" content="2024-11-02T10:15:43.001Z">
+<meta property="article:author" content="草木流年">
+<meta property="article:tag" content="JavaWeb">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://hierwxy.github.io/img/head.jpg"><link rel="shortcut icon" href="/img/4.png"><link rel="canonical" href="http://hierwxy.github.io/2024/10/20/JavaWeb/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/css/custom.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaWeb',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-02 18:15:43'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" ><link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" ><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="木叶村"><span class="site-name">木叶村</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JavaWeb</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-20T07:20:14.000Z" title="发表于 2024-10-20 15:20:14">2024-10-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-02T10:15:43.001Z" title="更新于 2024-11-02 18:15:43">2024-11-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JavaWeb"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第三章、JavaScript"><a href="#第三章、JavaScript" class="headerlink" title="第三章、JavaScript"></a>第三章、JavaScript</h1><h2 id="1、JS简介"><a href="#1、JS简介" class="headerlink" title="1、JS简介"></a>1、JS简介</h2><p>Javascript，提供了数拆验证的基本功能。ECMA-262 是正式的Javascript 标准。这个标准基于Javascript (Netscape) 和JScript (Microsof)。ECMA-262 的开发始于1996年，在 1997年7月，ECMA会员大会采纳了它的首个版本。这个标准由ECMA组织发展和维护。JavaScript 的正式名称是”ECMAScript”。JavaScript的组成包含ECMASCrPt.DOM、BOM。JS是种运行于浏览器端上的小脚本语句,可以实现网页如文本内容动,数据动志变化和动画特效等,Js有 如下特点</p>
+<ul>
+<li>脚本语言<ul>
+<li>Javascript是一种解释型的脚本语言，不同于C、C++、Java等语言先编译后执行，Javascript不会产生编译出来的字节码文件，而是在程序的运行过程中对源文件逐行进行解释。</li>
+</ul>
+</li>
+<li>基于对象<ul>
+<li>Javascript是一种基于对象的脚本语言，它不仅可以创建对象，也能使用现有的对象。但是面向对象的三大特性:「封装』、「继承』、「多态】中，javascript能够实现封装，可以模拟继承，不支持多态，所以它不是一门面向对象的编程语言。</li>
+</ul>
+</li>
+<li>弱类型<ul>
+<li>Jvascript中也有明确的数据类型，但是声明一个变量后它可以接收任何类型的数据，并且会在程序执行过程中根掘上下文自动转换类型。</li>
+</ul>
+</li>
+<li>事件驱动<ul>
+<li>Javascript是一种采用事件驱动的脚本语言，它不需要经过Web服务器就可以对用户的输入做出响应。</li>
+</ul>
+</li>
+<li>跨平台性<ul>
+<li>Javascript脚本语言不依赖于操作系统，仅需要浏览器的支持。因此一个Javascript脚本在编写后可以带到任意机器上使用，前提是机器上的浏览器支持Javascript脚本语言。目前JavaScript已被大多数的浏览器所支持。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-1JS组成"><a href="#1-1JS组成" class="headerlink" title="1.1JS组成"></a>1.1JS组成</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020153532133.png" alt="image-20241020153532133"></p>
+<h3 id="1-2JS的引入"><a href="#1-2JS的引入" class="headerlink" title="1.2JS的引入"></a>1.2JS的引入</h3><ol>
+<li>js的第一种引入方式，在head中通过一对script标签引入</li>
+<li>可以将JS代码放入一个.is文件中，在HTML的head中用一对script标签引入外部JS脚本</li>
+</ol>
+<p><strong>两种方式可以同时使用</strong></p>
+<h2 id="2、JS的数据类型和运算符"><a href="#2、JS的数据类型和运算符" class="headerlink" title="2、JS的数据类型和运算符"></a>2、JS的数据类型和运算符</h2><h3 id="2-1-JS的数据类型"><a href="#2-1-JS的数据类型" class="headerlink" title="2.1 JS的数据类型"></a>2.1 JS的数据类型</h3><ul>
+<li><p><strong>数值类型</strong></p>
+<p>数值类型统-为 number,不区分整数和浮点数</p>
+</li>
+<li><p><strong>字符串类型</strong></p>
+<p>字符串类型为 string 和JAVA中的string相似,JS中不严格区分单双引号,都可以用于表示字符串</p>
+</li>
+<li><p><strong>布尔类型</strong></p>
+<p>布尔类型为boolean 和Java中的boolean相似,但是在」s的if语句中,非空字符串会被转换为’真,非零数字也会被认为是”真</p>
+</li>
+<li><p><strong>引用数据类型</strong></p>
+<p>引用数据类型对象是0bject类型,各种对象和数组在JS中都是obiect类型</p>
+</li>
+<li><p><strong>function类型</strong></p>
+<p>JS中的各种函数属于function数据类型</p>
+</li>
+<li><p><strong>命名未赋值</strong></p>
+<p>is为弱类型语言,统一使用 var 声明对象和变量,在赋值时才确定真正的数据类型,变量如果只声明没有赋值的话,数据类型为undefined</p>
+</li>
+<li><p>赋予NULL值</p>
+<p>在JS中,如果给一个变量赋值为null,其数据类型是0bject,可以通过typeof关键字判断数据类型</p>
+</li>
+</ul>
+<h3 id="2-2-JS变量"><a href="#2-2-JS变量" class="headerlink" title="2.2 JS变量"></a>2.2 JS变量</h3><ol>
+<li>弱类型变量,可以统一声明成var</li>
+<li>var声明的变量可以再次声明</li>
+<li>变量可以使用不同的数据类型多次赋值</li>
+<li>JS的语句可以以:结尾,也可以不用:结尾</li>
+<li>变量标识符严格区分大小写</li>
+<li>标识符的命名规则参照JAVA</li>
+<li>如果使用了 一个没有声明的变量,那么运行时会报ncaught ReferenceError: ***is not defined at index.html:行号:列号</li>
+<li>如果一个变量只声明,没赋值,那么值是undefined</li>
+</ol>
+<h3 id="2-3-JS运算符"><a href="#2-3-JS运算符" class="headerlink" title="2.3 JS运算符"></a>2.3 JS运算符</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020162113862.png" alt="image-20241020162113862"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020162638529.png" alt="image-20241020162638529"></p>
+<h2 id="3、JS的流程控制和函数"><a href="#3、JS的流程控制和函数" class="headerlink" title="3、JS的流程控制和函数"></a>3、JS的流程控制和函数</h2><h3 id="3-1-JS分支结构"><a href="#3-1-JS分支结构" class="headerlink" title="3.1 JS分支结构"></a>3.1 JS分支结构</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020164304487.png" alt="image-20241020164304487"></p>
+<h3 id="3-2-JS循环结构"><a href="#3-2-JS循环结构" class="headerlink" title="3.2 JS循环结构"></a>3.2 JS循环结构</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020164521303.png" alt="image-20241020164521303"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020164631539.png" alt="image-20241020164631539"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020164656741.png" alt="image-20241020164656741"></p>
+<h3 id="3-3-JS函数声明"><a href="#3-3-JS函数声明" class="headerlink" title="3.3 JS函数声明"></a>3.3 JS函数声明</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020164850082.png" alt="image-20241020164850082"></p>
+<h2 id="4、Js的对象和JSON"><a href="#4、Js的对象和JSON" class="headerlink" title="4、Js的对象和JSON"></a>4、Js的对象和JSON</h2><h3 id="4-1-JS声明对象的语法"><a href="#4-1-JS声明对象的语法" class="headerlink" title="4.1 JS声明对象的语法"></a>4.1 JS声明对象的语法</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020170355863.png" alt="image-20241020170355863"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020170901554.png" alt="image-20241020170901554"></p>
+<h3 id="4-2-JSON格式"><a href="#4-2-JSON格式" class="headerlink" title="4.2 JSON格式"></a>4.2 JSON格式</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020191839363.png" alt="image-20241020191839363"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020192013474.png" alt="image-20241020192013474"></p>
+<p><strong>前端中JSON数据转换</strong></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020192711471.png" alt="image-20241020192711471"></p>
+<p><strong>后端中JSON数据转换</strong>，反射</p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020193717619.png" alt="image-20241020193717619"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020193747489.png" alt="image-20241020193747489"></p>
+<h3 id="4-3-JS常见对象"><a href="#4-3-JS常见对象" class="headerlink" title="4.3 JS常见对象"></a>4.3 JS常见对象</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/">菜鸟教程</a></p>
+<p>可以在这里看API</p>
+<h4 id="4-3-1-数组"><a href="#4-3-1-数组" class="headerlink" title="4.3.1 数组"></a>4.3.1 数组</h4><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020193910493.png" alt="image-20241020193910493"></p>
+<h4 id="4-3-2-Boolean对象"><a href="#4-3-2-Boolean对象" class="headerlink" title="4.3.2 Boolean对象"></a>4.3.2 Boolean对象</h4><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020195327234.png" alt="image-20241020195327234"></p>
+<h4 id="4-3-3-Date对象"><a href="#4-3-3-Date对象" class="headerlink" title="4.3.3 Date对象"></a>4.3.3 Date对象</h4><h4 id="4-3-4-Math"><a href="#4-3-4-Math" class="headerlink" title="4.3.4 Math"></a>4.3.4 Math</h4><h4 id="4-3-5-Number"><a href="#4-3-5-Number" class="headerlink" title="4.3.5 Number"></a>4.3.5 Number</h4><h4 id="4-3-6-String"><a href="#4-3-6-String" class="headerlink" title="4.3.6 String"></a>4.3.6 String</h4><h2 id="5、事件的绑定"><a href="#5、事件的绑定" class="headerlink" title="5、事件的绑定"></a>5、事件的绑定</h2><h3 id="5-1-什么是事件"><a href="#5-1-什么是事件" class="headerlink" title="5.1 什么是事件"></a>5.1 什么是事件</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020200348756.png" alt="image-20241020200348756"></p>
+<h3 id="5-2-常见事件"><a href="#5-2-常见事件" class="headerlink" title="5.2 常见事件"></a>5.2 常见事件</h3><p><strong>鼠标事件</strong>	</p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020200408972.png" alt="image-20241020200408972"></p>
+<p><strong>键盘事件</strong></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241020200458099.png" alt="image-20241020200458099"></p>
+<h2 id="6、BOM编程"><a href="#6、BOM编程" class="headerlink" title="6、BOM编程"></a>6、BOM编程</h2><h3 id="6-1什么是BOM"><a href="#6-1什么是BOM" class="headerlink" title="6.1什么是BOM"></a>6.1什么是BOM</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021172501726.png" alt="image-20241021172501726"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021172724960.png" alt="image-20241021172724960"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021172740318.png" alt="image-20241021172740318"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021174108654.png" alt="image-20241021174108654"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021174128954.png" alt="image-20241021174128954"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021174820236.png" alt="image-20241021174820236"></p>
+<h2 id="7、DOM编程"><a href="#7、DOM编程" class="headerlink" title="7、DOM编程"></a>7、DOM编程</h2><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021175036624.png" alt="image-20241021175036624"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021180230751.png" alt="image-20241021180230751"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021195153160.png" alt="image-20241021195153160"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021201002434.png" alt="image-20241021201002434"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021200740322.png" alt="image-20241021200740322"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241021195958649.png" alt="image-20241021195958649"></p>
+<h2 id="8、正则表达式"><a href="#8、正则表达式" class="headerlink" title="8、正则表达式"></a>8、正则表达式</h2><h3 id="8-1-正则表达式简介"><a href="#8-1-正则表达式简介" class="headerlink" title="8.1 正则表达式简介"></a>8.1 正则表达式简介</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024110819103.png" alt="image-20241024110819103"></p>
+<h3 id="8-2-正则表达式体验"><a href="#8-2-正则表达式体验" class="headerlink" title="8.2 正则表达式体验"></a>8.2 正则表达式体验</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024110947797.png" alt="image-20241024110947797"></p>
+<h1 id="第四章、XML"><a href="#第四章、XML" class="headerlink" title="第四章、XML"></a>第四章、XML</h1><h2 id="1、XML"><a href="#1、XML" class="headerlink" title="1、XML"></a>1、XML</h2><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024111147268.png" alt="image-20241024111147268"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024111228396.png" alt="image-20241024111228396"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024111240995.png" alt="image-20241024111240995"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024111756935.png" alt="image-20241024111756935"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024112008549.png" alt="image-20241024112008549"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024112215906.png" alt="image-20241024112215906"></p>
+<h2 id="2、Tomcat10"><a href="#2、Tomcat10" class="headerlink" title="2、Tomcat10"></a>2、Tomcat10</h2><h3 id="2-1-web"><a href="#2-1-web" class="headerlink" title="2.1 web"></a>2.1 web</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024112305613.png" alt="image-20241024112305613"></p>
+<img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024112331835.png" alt="image-20241024112331835" style="zoom:50%;">
+
+<h3 id="2-2-tomcat服务器"><a href="#2-2-tomcat服务器" class="headerlink" title="2.2 tomcat服务器"></a>2.2 tomcat服务器</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024112402140.png" alt="image-20241024112402140"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024112546969.png" alt="image-20241024112546969"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024112641307.png" alt="image-20241024112641307"></p>
+<h3 id="2-3web目录"><a href="#2-3web目录" class="headerlink" title="2.3web目录"></a>2.3web目录</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024151909474.png" alt="image-20241024151909474"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024151953587.png" alt="image-20241024151953587"></p>
+<h3 id="2-4-web部署方式"><a href="#2-4-web部署方式" class="headerlink" title="2.4 web部署方式"></a>2.4 web部署方式</h3><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024152002181.png" alt="image-20241024152002181"></p>
+<h2 id="3、HTTP协议"><a href="#3、HTTP协议" class="headerlink" title="3、HTTP协议"></a>3、HTTP协议</h2><h3 id="3-1-简介"><a href="#3-1-简介" class="headerlink" title="3.1 简介"></a>3.1 简介</h3><h4 id="3-1-1-历程"><a href="#3-1-1-历程" class="headerlink" title="3.1.1 历程"></a>3.1.1 历程</h4><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024224750730.png" alt="image-20241024224750730"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024224800568.png" alt="image-20241024224800568"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024224844808.png" alt="image-20241024224844808"></p>
+<h4 id="3-1-2-HTTP协议的会话方式"><a href="#3-1-2-HTTP协议的会话方式" class="headerlink" title="3.1.2 HTTP协议的会话方式"></a>3.1.2 HTTP协议的会话方式</h4><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241024225026641.png" alt="image-20241024225026641"></p>
+<h4 id="3-1-3-HTTP1-0和1-1的区别"><a href="#3-1-3-HTTP1-0和1-1的区别" class="headerlink" title="3.1.3 HTTP1.0和1.1的区别"></a>3.1.3 HTTP1.0和1.1的区别</h4><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241031163012428.png" alt="image-20241031163012428"></p>
+<h3 id="3-2请求和响应报文"><a href="#3-2请求和响应报文" class="headerlink" title="3.2请求和响应报文"></a>3.2请求和响应报文</h3><h4 id="3-2-1报文格式"><a href="#3-2-1报文格式" class="headerlink" title="3.2.1报文格式"></a>3.2.1报文格式</h4><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241031165910964.png" alt="image-20241031165910964"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241031165939418.png" alt="image-20241031165939418"></p>
+<h4 id="3-2-2-请求报文"><a href="#3-2-2-请求报文" class="headerlink" title="3.2.2 请求报文"></a>3.2.2 请求报文</h4><p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241102180729088.png" alt="image-20241102180729088"></p>
+<p><img src="/img/loading.gif" data-original="/2024/10/20/JavaWeb/image-20241102180741743.png" alt="image-20241102180741743"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://hierWxy.github.io">草木流年</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://hierwxy.github.io/2024/10/20/JavaWeb/">http://hierwxy.github.io/2024/10/20/JavaWeb/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://hierWxy.github.io" target="_blank">木叶村</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaWeb/">JavaWeb</a></div><div class="post_share"><div class="social-share" data-image="/img/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/11/12/%E9%9D%A2%E8%AF%95%E9%A2%981/" title="面试题1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">面试题1</div></div></a></div><div class="next-post pull-right"><a href="/2024/10/10/bagu/" title="bagu"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">bagu</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">草木流年</div><div class="author-info__description">未来可期</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2624477928@qq.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E3%80%81JavaScript"><span class="toc-text">第三章、JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81JS%E7%AE%80%E4%BB%8B"><span class="toc-text">1、JS简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1JS%E7%BB%84%E6%88%90"><span class="toc-text">1.1JS组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2JS%E7%9A%84%E5%BC%95%E5%85%A5"><span class="toc-text">1.2JS的引入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81JS%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">2、JS的数据类型和运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-JS%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2.1 JS的数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-JS%E5%8F%98%E9%87%8F"><span class="toc-text">2.2 JS变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-JS%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">2.3 JS运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81JS%E7%9A%84%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-text">3、JS的流程控制和函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-JS%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-text">3.1 JS分支结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-JS%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">3.2 JS循环结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-JS%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="toc-text">3.3 JS函数声明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81Js%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%92%8CJSON"><span class="toc-text">4、Js的对象和JSON</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-JS%E5%A3%B0%E6%98%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-text">4.1 JS声明对象的语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-JSON%E6%A0%BC%E5%BC%8F"><span class="toc-text">4.2 JSON格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-JS%E5%B8%B8%E8%A7%81%E5%AF%B9%E8%B1%A1"><span class="toc-text">4.3 JS常见对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-%E6%95%B0%E7%BB%84"><span class="toc-text">4.3.1 数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-Boolean%E5%AF%B9%E8%B1%A1"><span class="toc-text">4.3.2 Boolean对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-3-Date%E5%AF%B9%E8%B1%A1"><span class="toc-text">4.3.3 Date对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-4-Math"><span class="toc-text">4.3.4 Math</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-5-Number"><span class="toc-text">4.3.5 Number</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-6-String"><span class="toc-text">4.3.6 String</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BB%91%E5%AE%9A"><span class="toc-text">5、事件的绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8B%E4%BB%B6"><span class="toc-text">5.1 什么是事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6"><span class="toc-text">5.2 常见事件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81BOM%E7%BC%96%E7%A8%8B"><span class="toc-text">6、BOM编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1%E4%BB%80%E4%B9%88%E6%98%AFBOM"><span class="toc-text">6.1什么是BOM</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81DOM%E7%BC%96%E7%A8%8B"><span class="toc-text">7、DOM编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">8、正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E4%BB%8B"><span class="toc-text">8.1 正则表达式简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%BD%93%E9%AA%8C"><span class="toc-text">8.2 正则表达式体验</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E3%80%81XML"><span class="toc-text">第四章、XML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81XML"><span class="toc-text">1、XML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Tomcat10"><span class="toc-text">2、Tomcat10</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-web"><span class="toc-text">2.1 web</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">2.2 tomcat服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3web%E7%9B%AE%E5%BD%95"><span class="toc-text">2.3web目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-web%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F"><span class="toc-text">2.4 web部署方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81HTTP%E5%8D%8F%E8%AE%AE"><span class="toc-text">3、HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E7%AE%80%E4%BB%8B"><span class="toc-text">3.1 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-%E5%8E%86%E7%A8%8B"><span class="toc-text">3.1.1 历程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%BC%9A%E8%AF%9D%E6%96%B9%E5%BC%8F"><span class="toc-text">3.1.2 HTTP协议的会话方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-3-HTTP1-0%E5%92%8C1-1%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">3.1.3 HTTP1.0和1.1的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87"><span class="toc-text">3.2请求和响应报文</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F"><span class="toc-text">3.2.1报文格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87"><span class="toc-text">3.2.2 请求报文</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/12/%E9%9D%A2%E8%AF%95%E9%A2%981/" title="面试题1">面试题1</a><time datetime="2024-11-12T07:47:24.000Z" title="发表于 2024-11-12 15:47:24">2024-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/20/JavaWeb/" title="JavaWeb">JavaWeb</a><time datetime="2024-10-20T07:20:14.000Z" title="发表于 2024-10-20 15:20:14">2024-10-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/10/bagu/" title="bagu">bagu</a><time datetime="2024-10-10T08:25:51.000Z" title="发表于 2024-10-10 16:25:51">2024-10-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/30/hmdp/" title="hmdp">hmdp</a><time datetime="2024-09-30T14:30:01.000Z" title="发表于 2024-09-30 22:30:01">2024-09-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/27/leetcode/" title="leetcode">leetcode</a><time datetime="2024-09-27T12:04:31.000Z" title="发表于 2024-09-27 20:04:31">2024-09-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/5.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 草木流年</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="2567772154" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body></html>
